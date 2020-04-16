@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+SubmittedWord.destroy_all
+ValidWord.destroy_all
+Game.destroy_all 
+
+words = {}
+File.open("/usr/share/dict/words") do |file|
+  file.each do |line|
+    # words[line.strip] = true
+    ValidWord.create(word: line.strip)
+  end
+end
+
+wordArray = words.keys
+puts "word count: #{wordArray.length}"
