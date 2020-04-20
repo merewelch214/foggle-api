@@ -1,7 +1,7 @@
 class Api::V1::GamesController < ApplicationController
 
     def index
-        games = Game.all
+        games = Game.all.where.not(points: nil).order(points: :desc)
         render json: games
     end
 
