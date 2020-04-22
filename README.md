@@ -1,24 +1,11 @@
-# README
+# Foggle Back End
+This repo houses the back end for an application called Foggle. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Introduction
+For directions on how to play Foggle, please see the Foggle Front End ReadMe.
 
-Things you may want to cover:
+# Technologies
+The back end for Foggle was built using a Rails API. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Launch
+Prior to launch, the words database will need to be seeded. To do this, run 'rails db:seed'. Once the database is seeded, run 'rails s' in order to start the server. 
